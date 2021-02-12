@@ -1,0 +1,67 @@
+/*
+  ################
+    Фильтры
+  ################
+*/
+
+.filters_wrapper {
+  margin-bottom: 20px;
+  width: 100%;
+  background: #ffca41;
+  z-index: -1;
+}
+
+.filters {
+  padding: 10px 15px;
+  grid-template-columns: repeat(5, 1fr);
+}
+  .filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+    .filter > label {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .filter > .field {
+      position: relative;
+      width: 100%;
+    }
+      .filter > .field > input,
+      .filter > .field > select {
+        padding: 5px 5px 5px 30px;
+        height: 35px;
+        width: inherit;
+      }
+      .filter > .field > select { padding: 5px; }
+      .filter > .field > input[type=date] { padding: 5px; }
+      .filter > .field > img {
+        position: absolute;
+        z-index: 2;
+        left: 5px;
+      }
+
+select {
+  height: 35px;
+  width: 150px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.search_bar {
+  position: relative;
+  width: 100%;
+  max-width: 345px;
+}
+  .search_bar > img {
+    position: absolute;
+    left: 5px;
+  }
+  .search_bar > input {
+    padding: 5px 10px 5px 30px;
+    height: 35px;
+    width: 100%;
+  }

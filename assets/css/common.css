@@ -1,0 +1,67 @@
+/*
+  ################
+    Общие стили для всех страницы 
+  ################
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #1f2023;
+}
+
+.no_scroll {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+body { background-color: #f4f6fb; }
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1370px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.pointer { cursor: pointer; }
+
+.submit {
+  background-color: #ffbe16;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.shadow { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+
+.input {
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* .input:focus {
+  outline: none;
+  box-shadow: 0 0 0px 2px #ffbe16;
+} */

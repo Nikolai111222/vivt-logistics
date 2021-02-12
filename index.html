@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Мета ===================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>logistics | VIVT</title>
+
+  <!-- Таблицы стилей ===================== -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/media-queries.css">
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+
+  <!-- Иконка ===================== -->
+  <link rel="shortcut icon" href="./static/images/favico.ico" type="image/x-icon">
+
+  <!-- Скрипты : плагины ===================== -->
+  <script src="./assets/js/vue.v2.js" defer></script>
+  <script src="./assets/js/vue-router.js" defer></script>
+
+  <!-- Скрипты : Роуты ===================== -->
+  <script src="./assets/js/routes/auth.js" defer></script>
+  <script src="./assets/js/routes/main.js" defer></script>
+  <script src="./assets/js/routes/logs.js" defer></script>
+  <script src="./assets/js/routes/staff.js" defer></script>
+
+  <!-- Скрипты : главные файлы ===================== -->
+  <script src="./assets/js/charts.js" defer></script>
+  <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+  <div :class="{ no_scroll: isMenuShown }" id="app" class="flex">
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+    <app-menu></app-menu>
+  </div>
+  <script src="./assets/js/Chart.min.js"></script>
+</body>
+</html>

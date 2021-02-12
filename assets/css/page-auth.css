@@ -1,0 +1,30 @@
+/*
+  ################
+    Стили для страницы Авторизации 
+  ################
+*/
+
+#auth { justify-content: space-between; }
+  #auth > * {
+    width: 100%;
+    max-width: 48%;
+  }
+
+.form > img { margin-bottom: 20px; }
+.form > p { font-size: 18px; }
+
+.fields { margin: 40px 0; }
+  .fields > .field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+    .fields > .field > label {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .fields > .field > input {
+      width: 100%;
+      max-width: 400px;
+      height: 40px;
+    } 

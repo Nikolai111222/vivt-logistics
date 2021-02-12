@@ -1,0 +1,120 @@
+/*
+  ################
+    Стили для страницы /
+  ################
+*/
+
+/*
+ * == Записи ==========
+ */
+
+#logs { position: relative; }
+
+.log {
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px;
+  grid-template-columns: repeat(4, 1fr);
+}
+  .log > .employee > img {
+    width: 30px;
+    border-radius: 3px;
+  }
+  .log_item > img {
+    width: 15px;
+    margin-right: 5px;
+  }
+  .log > .employee {
+    text-decoration: underline;
+    color: #266dd8;
+  }
+  .log_item { font-size: 15px; }
+
+/*
+ * == Пагинация ==========
+ */
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+  .pagination_ctrl > img { width: 15px; }
+  .pagination_item {
+    width: 25px;
+    height: 30px;
+    background-color: white;
+    justify-content: center;
+    border-radius: 3px;
+    font-weight: 700;
+  }
+  .pagination_item_active {
+    background-color: #ffca41;
+    margin: 0 10px 0 15px;
+  }
+  .pagination_item_last { margin: 0 15px 0 10px; }
+
+#staff_filters { grid-template-columns: repeat(3, 1fr); }
+
+/*
+ * == Статистика ==========
+ */
+
+#statistics { margin-top: 40px; }
+
+.statistics {
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+.statistics_container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.statistics_container > .heading {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.statistics_container > .blocks {
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+}
+.statistics_container > .blocks > .block {
+  width: 48%;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  height: 150px;
+}
+.statistics_container > .blocks > .block > img { margin-left: -50px; }
+.statistics_container > .blocks > .block > .info {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 15px;
+}
+.statistics_container > .blocks > .block > .info > .heading {
+  font-weight: 700;
+  opacity: .5;
+  margin-bottom: 5px;
+}
+.statistics_container > .blocks > .block > .info > .value { font-size: 48px; }
+
+.chart_container {
+  grid-column-start: 1;
+  grid-column-end:3;
+}
+
+.chart_block {
+  width: 100%;
+  height: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+}
+.chart_block > .chart {}
+
+.circle_chart_block {
+  height: 500px;
+}
