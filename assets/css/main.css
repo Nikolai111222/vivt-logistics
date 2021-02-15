@@ -1,0 +1,44 @@
+@import url('./common.css');
+
+@import url('./fonts.css');
+
+@import url('./media-queries.css');
+
+@import url('./filters.css');
+@import url('./menu.css');
+
+@import url('./page-common.css');
+@import url('./page-auth.css');
+@import url('./page-staff.css');
+@import url('./page-stats.css');
+
+@import url('./dark_theme.css');
+@import url('./page-logs.css');
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* =========================== */
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: .5s;
+  opacity: 1;
+}
+
+.slide-enter {
+  transform: translate(0, 10vw);
+  opacity: 0;
+}
+
+.slide-leave-to {
+  transform: translate(0, -10vw);
+  opacity: 0;
+}

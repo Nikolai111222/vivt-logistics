@@ -1,0 +1,99 @@
+.dark_bg { background-color: var(--black) !important; }
+
+.dark .form > p,
+.dark .fields > .field > label,
+.dark input,
+.dark nav > *,
+.dark .filter > label,
+.dark .filter > .field > select,
+.dark .filter > .field > select > option,
+.dark .h3,
+.dark .log_item,
+.dark .list > div > div > .heading,
+.dark .list > div > div > button,
+.dark .pagination_item,
+.dark .statistics_container > .heading,
+.dark .statistics_container > .blocks > .block > .info > .heading,
+.dark .statistics_container > .blocks > .block > .info > .value,
+.dark footer,
+.dark .staff > .employee > .info *,
+.dark .group_name {
+  color: rgb(255, 255, 255, .7);
+}
+
+.dark .menu {
+  background: none;
+  background-color: var(--dark_accent);
+}
+
+.dark .active {
+  color: var(--dark_accent__light);
+  border-bottom-color: var(--dark_accent);
+}
+.dark .menu_items .active {
+  color: var(--white);
+}
+
+.dark #auth > img { opacity: .5; }
+#app::after {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(1);
+  background-color: var(--black);
+}
+.dark::after { animation: .5s ease-in-out change1;}
+.light::after { animation: .5s ease-in-out change2;}
+
+.dark .button { background-color: var(--dark_accent__light); }
+
+.dark .form > input[type=submit] { font-weight: 500; }
+
+.dark .text_logo { color: var(--dark_accent__light); }
+  .dark .text_logo > span { color: var(--dark_accent__light); }
+
+.dark .arrow_down { border-top: 6px solid var(--white); }
+
+.dark .error { 
+  color: lightcoral;
+  font-weight: 500;
+}
+
+.dark .filters_wrapper { background-color: var(--dark_accent); }
+
+.dark input[type=date]::-webkit-calendar-picker-indicator {
+  background: url('../../static/images/white_calendar.png');
+  background-position: center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.dark .submit { color: var(--black); }
+
+.dark nav > * { font-weight: 500; }
+
+.dark .btn::after { background-color: var(--dark_accent); }
+
+.dark .fields > .field > label {
+  opacity: .5;
+  font-weight: 500;
+}
+
+.dark input,
+.dark .log,
+.dark .pagination_item,
+.dark .list > .hidden_menu,
+.dark .filter > .field > select,
+.dark .statistics_container > .blocks > .block,
+.dark .chart_block,
+.dark .staff > .employee {
+  background-color: var(--dark_second_bg);
+  box-shadow: none;
+}
+
+.dark .list > div > div > button { background-color: var(--dark_accent); }
+
+.dark .list > .hidden_menu { box-shadow: 0 5px 10px rgba(255, 255, 255, .2); }
+
+.dark .pagination_item_active { background-color: var(--dark_accent__light); }
