@@ -1,0 +1,108 @@
+/*
+  ################
+    Общие стили для всех страницы 
+  ################
+*/
+
+:root {
+  --black: #1f2023;
+  /* --white: #f4f6fb; */
+  --white: #f2f2f2;
+  --accent: #ffca41;
+  --dark_accent: #474787;
+  --dark_accent__light: #706fd3;
+  --dark_second_bg: #0f0f0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.no_scroll {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.text_logo {
+  border: none;
+  cursor: default;
+  font-size: 36px;
+  font-weight: 700;
+  user-select: none;
+  letter-spacing: 2px;
+  color: var(--accent);
+  transition: color .3s;
+  text-decoration: none;
+  text-shadow: 2px 2px black;
+}
+.text_logo span {
+  color: var(--accent);
+  transition: color .3s;
+}
+
+#app {
+  width: 100%;
+  transition: .3s;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  background-color: var(--white);
+}
+#app > div { z-index: 2; }
+
+@keyframes change1 {
+  from { height: 0; width: 0; }
+  to { width: 250vh; height: 250vh; }
+}
+@keyframes change2 {
+  from { width: 250vh; height: 250vh; }
+  to { height: 0; width: 0; }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1370px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.pointer { cursor: pointer; }
+
+.button {
+  /* font-size: 18px; */
+  /* font-weight: 700; */
+  /* padding: 10px 15px; */
+  border: none;
+  border-radius: 5px;
+  transition: background-color .3s;
+  background-color: var(--accent);
+}
+
+.shadow { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+
+.input {
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color .3s;
+}
+/* .input:focus {
+  outline: none;
+  box-shadow: 0 0 0px 2px #ffbe16;
+} */
