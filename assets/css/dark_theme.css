@@ -1,8 +1,18 @@
-.dark_bg { background-color: var(--black) !important; }
+/* Задний фон страницы */
+.dark_bg { background-color: black !important }
 
+.dark > .main_wrapper::after { animation: .5s ease-in-out change1 }
+.light > .main_wrapper::after { animation: .5s ease-in-out change2 }
+
+.dark.container::after { animation: .5s ease-in-out change1 }
+.light.container::after { animation: .5s ease-in-out change2 }
+
+/* Задний фон - ЧЕРНЫЙ */
 .dark .form > p,
-.dark .fields > .field > label,
-.dark input,
+.dark .fields > .field_wrapper > label,
+.dark input[type=date],
+.dark input[type=password],
+.dark input[type=text],
 .dark nav > *,
 .dark .filter > label,
 .dark .filter > .field > select,
@@ -12,88 +22,120 @@
 .dark .list > div > div > .heading,
 .dark .list > div > div > button,
 .dark .pagination_item,
-.dark .statistics_container > .heading,
-.dark .statistics_container > .blocks > .block > .info > .heading,
-.dark .statistics_container > .blocks > .block > .info > .value,
+.dark .pagination_item *,
 .dark footer,
 .dark .staff > .employee > .info *,
-.dark .group_name {
-  color: rgb(255, 255, 255, .7);
-}
+.dark .group_name,
+.dark .tip *,
+.dark .tip,
+.dark .menu_items .active,
+.dark .select label *,
+.dark .select_item > span,
+.dark h3,
+.dark h4,
+.dark .employee_activity > div > span,
+.dark .employee_activity > div > p,
+.dark .employee_activity > div > p *,
+.dark .tool_switch_item,
+.dark .select > p { color: rgb(255, 255, 255, .7) }
 
+.dark .select { border-bottom-color: black }
+
+.dark .link { color: var(--dark_accent) }
+
+.dark .tool_switch__active,
+.dark .tool_switch { border-bottom-color: var(--dark_accent__light) }
+
+/* Задний фон - ФИОЛЕТОВЫЙ */
+.dark .list > div > div > button,
+.dark .filters,
+.dark .btn::after,
+.dark aside,
 .dark .menu {
   background: none;
   background-color: var(--dark_accent);
 }
 
-.dark .active {
-  color: var(--dark_accent__light);
-  border-bottom-color: var(--dark_accent);
-}
-.dark .menu_items .active {
-  color: var(--white);
-}
+.dark .select label > img { opacity: .7 }
 
-.dark #auth > img { opacity: .5; }
-#app::after {
+.dark #auth > img { opacity: .5 }
+
+.main_wrapper::after {
   z-index: 1;
   content: '';
   position: absolute;
   border-radius: 50%;
   transform: scale(1);
-  background-color: var(--black);
 }
-.dark::after { animation: .5s ease-in-out change1;}
-.light::after { animation: .5s ease-in-out change2;}
 
-.dark .button { background-color: var(--dark_accent__light); }
+.dark input,
+.dark .checkbox,
+.dark aside .active,
+.dark .select,
+.dark .sort_icon,
+.main_wrapper::after,
+.container::after,
+.dark .active .icon,
+.dark .list > .hidden_menu,
+.dark .filter > .field > select { background-color: black }
 
-.dark .form > input[type=submit] { font-weight: 500; }
+.dark #auth input[type=text],
+.dark #auth input[type=password] { background-color: #141414 }
 
-.dark .text_logo { color: var(--dark_accent__light); }
-  .dark .text_logo > span { color: var(--dark_accent__light); }
+.dark .text_logo,
+.dark span.tip b,
+.dark .text_logo > span { color: var(--dark_accent__light) }
 
-.dark .arrow_down { border-top: 6px solid var(--white); }
+.dark .arrow_down { border-top: 6px solid var(--white) }
 
 .dark .error { 
   color: lightcoral;
   font-weight: 500;
 }
 
-.dark .filters_wrapper { background-color: var(--dark_accent); }
-
 .dark input[type=date]::-webkit-calendar-picker-indicator {
   background: url('../../static/images/white_calendar.png');
   background-position: center;
-  background-size: 20px 20px;
+  background-size: 20px;
   background-repeat: no-repeat;
 }
 
-.dark .submit { color: var(--black); }
+.dark .submit { color: var(--black) }
 
-.dark nav > * { font-weight: 500; }
-
-.dark .btn::after { background-color: var(--dark_accent); }
+.dark nav > * { font-weight: 500 }
 
 .dark .fields > .field > label {
   opacity: .5;
   font-weight: 500;
 }
 
-.dark input,
 .dark .log,
 .dark .pagination_item,
-.dark .list > .hidden_menu,
-.dark .filter > .field > select,
-.dark .statistics_container > .blocks > .block,
 .dark .chart_block,
+.dark .tools > div,
 .dark .staff > .employee {
-  background-color: var(--dark_second_bg);
+  background-color: #141414;
   box-shadow: none;
 }
 
-.dark .list > div > div > button { background-color: var(--dark_accent); }
+.dark .button,
+.dark .count,
+.dark .pagination_item_active { background-color: var(--dark_accent__light) }
 
-.dark .list > .hidden_menu { box-shadow: 0 5px 10px rgba(255, 255, 255, .2); }
+.dark .pagination_item_active { color: var(--black) }
 
-.dark .pagination_item_active { background-color: var(--dark_accent__light); }
+.dark .select { box-shadow: 0 2px 10px rgb(112 111 211 / 70%) }
+
+.dark .select_item { opacity: .7 }
+
+@media (hover: hover) {
+  .dark .select_item:hover { background-color: rgba(255, 255, 255, .16) }
+}
+
+.dark .list > .hidden_menu { box-shadow: 0 2px 10px rgb(112 111 211 / 70%) }
+
+.dark main::-webkit-scrollbar-thumb,
+.dark main *::-webkit-scrollbar-thumb {
+  background-color: var(--dark_accent);
+  border: 3px solid black;
+}

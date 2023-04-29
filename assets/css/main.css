@@ -1,44 +1,51 @@
-@import url('./common.css');
+/* Подключение файлов стилей */
 
 @import url('./fonts.css');
+@import url('./common.css');
+
+@import url('../../components/employee/index.css');
+@import url('../../components/icon/index.css');
+@import url('../../components/log/index.css');
+@import url('../../components/menu/index.css');
+@import url('../../components/theme-switch/index.css');
+
+@import url('./filters.css');
+
+@import url('./vue.animations.css');
+@import url('./page-auth.css');
+@import url('./page-staff.css');
+@import url('./page-tools.css');
+
+@import url('./page-logs.css');
+@import url('./page-staff.css');
 
 @import url('./media-queries.css');
 
-@import url('./filters.css');
-@import url('./menu.css');
-
-@import url('./page-common.css');
-@import url('./page-auth.css');
-@import url('./page-staff.css');
-@import url('./page-stats.css');
-
 @import url('./dark_theme.css');
-@import url('./page-logs.css');
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity .3s;
+
+/* Стилизация скролл бара */
+
+.main_wrapper *::-webkit-scrollbar { width: 10px }
+
+.main_wrapper *::-webkit-scrollbar-track { background: transparent }
+
+.main_wrapper *::-webkit-scrollbar-track-piece { background-color: transparent }
+
+.main_wrapper *::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--accent);
+  border: 3px solid var(--white);
 }
 
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
 
-/* =========================== */
-
-.slide-leave-active,
-.slide-enter-active {
-  transition: .5s;
-  opacity: 1;
-}
-
-.slide-enter {
-  transform: translate(0, 10vw);
-  opacity: 0;
-}
-
-.slide-leave-to {
-  transform: translate(0, -10vw);
-  opacity: 0;
+/* Переменные с цветами */
+:root {
+  --yellow: #FFBE16;
+  --black: #1f2023;
+  --white: #f2f2f2;
+  --accent: #ffca41;
+  --dark_accent: #474787;
+  --dark_accent__light: #706fd3;
+  --dark_second_bg: #0f0f0f;
 }

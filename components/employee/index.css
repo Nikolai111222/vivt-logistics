@@ -1,0 +1,41 @@
+.staff > .employee {
+  border-radius: 5px;
+  background-color: white;
+  grid-template-columns: 1fr 2fr;
+}
+  .staff > .employee > img {
+    width: 120px;
+    margin-right: 10px;
+    border-radius: 5px 0 0 5px;
+  }
+  .staff > .employee > .info {
+    height: 100%;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+.name { font-size: 18px }
+
+.position {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.marks { width: 100% }
+  .mark { filter: grayscale(1); opacity: .3; }
+    .mark .icon { margin-right: 10px }
+      .mark .icon > svg { width: 20px; height: 20px; }
+
+.mark_active {
+  filter: none;
+  opacity: 1;
+}
+/* .mark:first-child { margin-right: 10px } */
+.mark > img,
+.mark > svg {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  fill: #e0a200;
+}

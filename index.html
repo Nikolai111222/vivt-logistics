@@ -8,52 +8,43 @@
 
   <!-- Таблицы стилей ===================== -->
   <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/media-queries.css">
-  <link rel="stylesheet" href="./assets/css/fonts.css">
 
   <!-- Иконка ===================== -->
   <link rel="shortcut icon" href="./static/images/favico.ico" type="image/x-icon">
 
-  <!-- Скрипты : плагины ===================== -->
-  <script src="./assets/js/plugins/slowNumber.js"></script>
+  <!-- Плагины ===================== -->
   <script src="./assets/js/plugins/vue.v2.js" defer></script>
   <script src="./assets/js/plugins/vue-router.js" defer></script>
   <script src="./assets/js/plugins/vuex.js" defer></script>
   <script src="./assets/js/plugins/Chart.min.js" defer></script>
 
-  <!-- Скрипты : Роуты ===================== -->
-  <script src="./assets/js/router/routes/auth.js" defer></script>
-  <script src="./assets/js/router/routes/main.js" defer></script>
-  <script src="./assets/js/router/routes/logs.js" defer></script>
-  <script src="./assets/js/router/routes/staff.js" defer></script>
-  <script src="./assets/js/router/routes/statistics.js" defer></script>
-  <script src="./assets/js/router/routes/404.js" defer></script>
-  <script src="./assets/js/router/router.js" defer></script>
+  <!-- Маршруты ===================== -->
+  <script src="./router/routes/auth.js" defer></script>
+  <script src="./router/routes/app.js" defer></script>
+  <script src="./router/routes/tools.js" defer></script>
+  <script src="./router/routes/logs.js" defer></script>
+  <script src="./router/routes/staff.js" defer></script>
+  <script src="./router/routes/404.js" defer></script>
 
-  <!-- Скрипты : Другое ===================== -->
-  <script src="./assets/js/menu.js" defer></script>
+  <!-- Компоненты ===================== -->
+  <script src="./components/icon/index.js" defer></script>
+  <script src="./components/employee/index.js" defer></script>
+  <script src="./components/log/index.js" defer></script>
+  <script src="./components/menu/index.js" defer></script>
+  <script src="./components/theme-switch/index.js" defer></script>
 
-  <!-- Скрипты : файлы найстроек ===================== -->
-  <script src="./assets/js/charts.js" defer></script>
-  <script src="./assets/js/store.js" defer></script>
-  <script src="./assets/js/main.js" defer></script>
+  <!-- Настройки ===================== -->
+  <script src="./router/router.js" defer></script>
+  <script src="./assets/js/chartsjs.config.js" defer></script>
+  <script src="./store/index.js" defer></script>
+  <script src="./index.js" defer></script>
 </head>
 <body>
-  <div
-    :class="{
-      no_scroll: $store.getters.IS_MENU,
-      light: $store.getters.IS_LIGHT_THEME,
-      dark: $store.getters.IS_DARK_THEME,
-      dark_bg: $store.getters.IS_DARK_BG
-    }"
-    id="app"
-    class="flex"
-  >
+  <!-- Контейнер под управлением Vue ===================== -->
+  <div id="app" class="flex">
+    <!-- Область для отображения маршрутов ===================== -->
     <transition name="fade" mode="out-in">
       <router-view></router-view>
-    </transition>
-    <transition name="slide">
-      <app-menu></app-menu>
     </transition>
   </div>
 </body>

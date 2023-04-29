@@ -1,31 +1,105 @@
 /*
   ################
-    Общие стили для всех страницы 
+    Общие стили для всех страниц
   ################
 */
-
-:root {
-  --black: #1f2023;
-  /* --white: #f4f6fb; */
-  --white: #f2f2f2;
-  --accent: #ffca41;
-  --dark_accent: #474787;
-  --dark_accent__light: #706fd3;
-  --dark_second_bg: #0f0f0f;
-}
 
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
   color: var(--black);
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+  * > img { user-select: none }
 
-.no_scroll {
-  overflow: hidden;
-  max-height: 100vh;
+#app {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
+#auth {
+  width: 100%;
+  max-width: 1370px;
+  padding: 0 15px;
+}
+
+.main_wrapper,
+.log,
+.input,
+select,
+.button,
+.chart,
+.tools > div,
+.filters,
+.staff > .employee,
+.pagination_item,
+.checkbox,
+.sort_icon,
+aside .active,
+.container,
+.count { transition: background-color .3s }
+
+h3,
+label,
+.log_item,
+h4,
+.employee_activity > div > span,
+.employee_activity > div > p,
+.link,
+.tool_switch_item,
+.name,
+.position,
+.form > p,
+.text_logo,
+.mark > span,
+.text_logo span,
+.pagination_item,
+.fields > .field_wrapper > label,
+footer,
+span.tip,
+span.tip b,
+.select label { transition: color .3s }
+
+.app_wrapper {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  overflow: hidden;
+  background-color: var(--yellow);
+  grid-template-columns: 1fr 50px;
+}
+
+.heading {
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main_wrapper {
+  overflow: hidden;
+  position: relative;
+  background-color: #F4F6FB;
+  justify-content: center;
+}
+main {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  z-index: 2;
+}
+
+.is_menu_not_active { grid-template-columns: 1fr !important }
+  .is_menu_not_active aside { display: none }
 
 .text_logo {
   border: none;
@@ -35,25 +109,30 @@
   user-select: none;
   letter-spacing: 2px;
   color: var(--accent);
-  transition: color .3s;
   text-decoration: none;
   text-shadow: 2px 2px black;
 }
-.text_logo span {
-  color: var(--accent);
-  transition: color .3s;
-}
+  .text_logo span { color: var(--accent) }
 
-#app {
-  width: 100%;
-  transition: .3s;
-  overflow: hidden;
-  min-height: 100vh;
-  position: relative;
-  justify-content: center;
-  background-color: var(--white);
+.field.input_box > img {
+  left: 10px;
+  z-index: 2;
+  width: 20px;
+  opacity: .5;
+  position: absolute;
 }
-#app > div { z-index: 2; }
+.field > input[type=text],
+.field > input[type=password],
+.field > input[type=date],
+.field > select {
+  height: 35px;
+  width: inherit;
+  padding: 5px 5px 5px 40px;
+}
+.field {
+  width: 100%;
+  position: relative;
+}
 
 @keyframes change1 {
   from { height: 0; width: 0; }
@@ -64,45 +143,63 @@
   to { height: 0; width: 0; }
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1370px;
-}
-
 .flex {
   display: flex;
   align-items: center;
 }
 
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.pointer { cursor: pointer; }
+.pointer { cursor: pointer }
 
 .button {
-  /* font-size: 18px; */
-  /* font-weight: 700; */
-  /* padding: 10px 15px; */
   border: none;
   border-radius: 5px;
-  transition: background-color .3s;
   background-color: var(--accent);
 }
 
-.shadow { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+.shadow { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15) }
 
 .input {
   border: none;
   font-size: 18px;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color .3s;
 }
-/* .input:focus {
-  outline: none;
-  box-shadow: 0 0 0px 2px #ffbe16;
-} */
+
+.logo_wrapper > a { line-height: 0 }
+
+/*
+ * == Кнопка ==========
+ */
+
+.btns { margin-left: 15px }
+  .btns > .btn:first-child { margin-right: 5px }
+  .btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    justify-content: center;
+  }
+    .btn > .btn_img {
+      z-index: 2;
+      opacity: .7;
+      transition: .3s;
+    }
+    .btn::after {
+      z-index: 1;
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: scale(0);
+      border-radius: inherit;
+      background: var(--accent);
+      transition: .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    .btn_active > .btn_img { opacity: 1 }
+    .btn_active::after { transform: scale(1) }
+
+@media (hover: hover) {
+  .btn:hover img { opacity: 1 }
+  .btn:hover::after { transform: scale(1) }
+}

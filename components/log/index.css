@@ -1,0 +1,25 @@
+.log {
+  padding: 5px;
+  display: grid;
+  border-radius: 3px;
+  background-color: white;
+  grid-template-columns: repeat(4, 1fr);
+}
+  .log > .employee > img {
+    width: 30px;
+    border-radius: 3px;
+  }
+  .log_item > img {
+    width: 15px;
+    margin-right: 5px;
+  }
+  .log_item > .icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+  .log_item > .icon > svg {
+    width: inherit;
+    height: inherit;
+  }
+  .log_item { font-size: 15px }

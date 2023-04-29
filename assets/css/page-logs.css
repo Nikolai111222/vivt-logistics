@@ -1,6 +1,6 @@
 /*
   ################
-    Стили для страницы /
+    Стили для страницы /logs
   ################
 */
 
@@ -8,52 +8,35 @@
  * == Записи ==========
  */
 
-#logs { position: relative; }
-
-.log {
-  padding: 5px;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  background-color: white;
-  transition: background-color .3s;
-  grid-template-columns: repeat(4, 1fr);
+.logs {
+  margin-top: 20px;
+  grid-template-rows: repeat(10, 1fr);
+  width: 100%;
+  display: grid;
+  gap: 20px;
 }
-  .log > .employee > img {
-    width: 30px;
-    border-radius: 3px;
-  }
-  .log_item > img {
-    width: 15px;
-    margin-right: 5px;
-    transition: color .3s;
-  }
-  .log > .employee {
-    text-decoration: underline;
-    color: #266dd8;
-  }
-  .log_item { font-size: 15px; }
 
 /*
  * == Пагинация ==========
  */
 
 .pagination {
-  justify-content: center;
   margin-top: 20px;
+  justify-content: center;
 }
+  .pagination > * { margin-right: 10px; }
+  .pagination > *:last-child { margin-right: 0; }
   .pagination_item {
     min-width: 25px;
     min-height: 30px;
-    background-color: white;
-    justify-content: center;
-    border-radius: 3px;
     font-weight: 700;
     padding: 8px 5px;
+    border-radius: 3px;
+    justify-content: center;
+    background-color: white;
   }
   .pagination_item_active {
     background-color: var(--accent);
-    margin: 0 10px 0 15px;
   }
-  .pagination_item_last { margin: 0 15px 0 10px; }
 
-#staff_filters { grid-template-columns: repeat(3, 1fr); }
+/* #staff_filters { grid-template-columns: repeat(3, 1fr); } */

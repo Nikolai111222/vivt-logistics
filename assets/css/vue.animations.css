@@ -1,0 +1,29 @@
+/* Анимация проявления */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Анимация проявления (скольжения) снизу */
+
+.select_slide-leave-active,
+.select_slide-enter-active {
+  transition: .2s;
+  opacity: 1;
+}
+
+.select_slide-enter {
+  transform: translate(0, 20px);
+  opacity: 0;
+}
+
+.select_slide-leave-to {
+  transform: translate(0, -20px);
+  opacity: 0;
+}
